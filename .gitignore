@@ -1,1 +1,6 @@
 wp-config.php
+<<<<<<< HEAD
+=======
+/.idea
+/vendor
+>>>>>>> d6fb8376ebe9c7866e71bb3e7a6b6c6dbcbd135b
