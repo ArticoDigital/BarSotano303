@@ -20,28 +20,7 @@
 
 <body <?php body_class(); ?> data-urlBody="<?php bloginfo('url') ?>">
 <header class="Header">
-    <div class="buttonNav">
 
-
-                </svg>
-            </button>
-        </form>
-        <a href="">EN</a>
-        <a href="" class="active">ES</a>
-    </div>
-    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-        <?php if (get_the_category()[0]->name == "portafolios") : ?>
-            <figure class="Header-image"><?php echo get_the_post_thumbnail(30); ?></figure>
-        <?php elseif (get_the_category()[0]->name == "noticias") : ?>
-            <figure class="Header-image"><?php echo get_the_post_thumbnail(2); ?></figure>
-        <?php else: ?>
-            <figure class="Header-image"><?php the_post_thumbnail(); ?></figure>
-        <?php endif; ?>
-
-
-    <?php endwhile; endif;
-    rewind_posts(); ?>
 </header>
 
 <?php wp_nav_menu(array('theme_location' => 'menuHeader', 'container' => 'nav')) ?>
