@@ -70,10 +70,10 @@
                     <a href=""></a></href><img width="40px" src="<?php bloginfo('template_directory') ?>/assets/images/menu.svg" alt=""></a>
                 </li>
                 <li>
-                    <a href=""></a></href><img width="40px" src="<?php bloginfo('template_directory') ?>/assets/images/blog.svg" alt=""></a>
+                    <a href=""></a></href><img width="50px" src="<?php bloginfo('template_directory') ?>/assets/images/blog.svg" alt=""></a>
                 </li>
                 <li>
-                    <a href=""></a></href><img width="40px" src="<?php bloginfo('template_directory') ?>/assets/images/promo.svg" alt=""></a>
+                    <a href=""></a></href><img width="60px" src="<?php bloginfo('template_directory') ?>/assets/images/promo.svg" alt=""></a>
                 </li>
             </ul>
         </nav>
