@@ -1,24 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 58.8 65.8" style="enable-background:new 0 0 58.8 65.8;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#FFFFFF;}
-	.st1{fill:#A49034;stroke:#FFFFFF;stroke-miterlimit:10;}
-	.st2{fill:#668461;stroke:#FFFFFF;stroke-miterlimit:10;}
-</style>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="64.455px" height="54px" viewBox="-10.58 0 64.455 54" enable-background="new -10.58 0 64.455 54" xml:space="preserve">
+<title>cocteles</title>
+<desc>Created with Sketch.</desc>
 <g id="XMLID_1_">
 	<g id="XMLID_18_">
-		
-			<rect id="XMLID_20_" x="24.3" y="16" transform="matrix(0.9946 0.1041 -0.1041 0.9946 3.75 -3.9092)" class="st0" width="30" height="36.1"/>
-		
-			<rect id="XMLID_19_" x="26.1" y="17.5" transform="matrix(0.9946 0.104 -0.104 0.9946 3.587 -3.9338)" class="st1" width="26.9" height="29.8"/>
+		<polygon id="XMLID_20_" fill="#FFFFFF" points="16.661,4.51 52.493,8.284 47.979,51.664 12.148,47.892 		"/>
+		<polygon id="XMLID_19_" fill="#A49034" points="18.43,6.507 50.56,9.886 46.838,45.697 14.708,42.316 		"/>
 	</g>
 	<g id="XMLID_15_">
-		
-			<rect id="XMLID_17_" x="9.7" y="15.1" transform="matrix(0.9286 -0.3711 0.3711 0.9286 -10.5268 11.5502)" class="st0" width="30" height="36.1"/>
-		
-			<rect id="XMLID_16_" x="10.7" y="16.8" transform="matrix(0.9286 -0.3712 0.3712 0.9286 -10.0269 11.2303)" class="st2" width="26.9" height="29.8"/>
+		<polygon id="XMLID_17_" fill="#FFFFFF" points="-9.961,13.498 23.493,0.046 39.581,40.549 6.127,54 		"/>
+		<polygon id="XMLID_16_" fill="#668461" points="-7.486,14.569 22.511,2.504 35.794,35.938 5.797,48.002 		"/>
 	</g>
 </g>
 </svg>

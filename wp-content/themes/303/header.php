@@ -75,8 +75,6 @@
                 <li>
                     <a href=""></a></href><img width="40px" src="<?php bloginfo('template_directory') ?>/assets/images/promo.svg" alt=""></a>
                 </li>
-                <li>sadasd</li>
-                <li>sadasd</li>
             </ul>
         </nav>
     </header>

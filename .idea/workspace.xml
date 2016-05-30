@@ -62,8 +62,8 @@
       <file leaf-file-name="header.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/303/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37921348">
-              <caret line="75" column="141" selection-start-line="75" selection-start-column="141" selection-end-line="75" selection-end-column="141" />
+            <state vertical-scroll-proportion="0.42696628">
+              <caret line="72" column="140" selection-start-line="72" selection-start-column="140" selection-end-line="72" selection-end-column="140" />
               <folding />
             </state>
           </provider>
@@ -277,7 +277,7 @@
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/juan2ramos/Sites/BarSotano303/wp-content/themes/303/assets/css/style.scss&#10;style&#9;FILE&#9;file:///Users/juan2ramos/Sites/BarSotano303/wp-content/themes/303/style.css" />
-    <property name="FullScreen" value="true" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -319,7 +319,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33185184" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
@@ -711,8 +711,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/303/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37921348">
-          <caret line="75" column="141" selection-start-line="75" selection-start-column="141" selection-end-line="75" selection-end-column="141" />
+        <state vertical-scroll-proportion="0.42696628">
+          <caret line="72" column="140" selection-start-line="72" selection-start-column="140" selection-end-line="72" selection-end-column="140" />
           <folding />
         </state>
       </provider>
