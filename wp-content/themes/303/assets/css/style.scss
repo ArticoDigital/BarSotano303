@@ -4,10 +4,70 @@
 @import "lib/grid";
 
 $maxWidth: 75rem;
+$red : #EC1C24;
 
 body {
   color: red;
-  background: peru;
+  background: tomato;
   padding: 0 1rem;
 
+}
+main{
+  margin: auto;
+  max-width: rem(1280);
+}
+video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+}
+
+.stopfade {
+  opacity: .5;
+}
+.Header{
+  padding: rem(20);
+}
+.Header-logo{
+
+  svg g{
+    fill:$red;
+    @include transition(all .4s)
+  }
+  &:hover{
+    svg g{
+      fill:white;
+    }
+  }
+}
+.Nav{
+  img{
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    @include transition(all .4s);
+    &:hover{
+      filter: grayscale(0);
+      -webkit-filter: grayscale(0);
+    }
+  }
+  li{
+    img {
+      height: rem(40);
+    }
+    &:nth-child(2){
+      img{
+        height: rem(35);
+      }
+    }
+
+  }
 }
