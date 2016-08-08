@@ -13,7 +13,20 @@
     <link rel="shortcut icon" href="<?php bloginfo('template_url') ?>/assets/images/favicon.ico">
     <link rel="stylesheet" href="<?php bloginfo('template_url') ?>/assets/css/normalize.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url') ?>/assets/css/style.css">
+    <script type="text/javascript">
+         /* Set the width of the side navigation to 250px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "280px";
+            document.getElementById("mySidenav").style.height = "80%";
+        }
 
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("mySidenav").style.height = "0";
+        }
+
+    </script>
     <?php wp_head(); ?>
 
 </head>
@@ -24,7 +37,47 @@
     <source src="//demosthenes.info/assets/videos/polina.webm" type="video/webm">
     <source src="//demosthenes.info/assets/videos/polina.mp4" type="video/mp4">
 </video>
-<main>
+
+
+<?php global $post;
+
+
+$my_query = new WP_Query('category_name=eventos&showposts=4'); ?>
+    <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+
+
+    <ul class="Events row">
+
+        <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
+            <?php
+            $back = get_post_custom_values('fondo', $post->ID)[0];
+            $color = get_post_custom_values('color', $post->ID)[0];
+            ?>
+            <li class="cols-6 row middle end" style='background : <?php echo $back ?>'>
+                <a href=" <?php echo get_permalink($post->ID) ?>">
+                    
+                        <?php the_post_thumbnail(); ?>
+                    <?php echo '<span class="cols-6 end" style="color:  ' . $color . ' ">' . get_the_title() . '</span>' ?>
+                    <!--<article>
+                    <?php the_excerpt(); ?>
+                    </article>-->
+                </a>
+            </li>
+        <?php endwhile; ?>
+     </ul>
+    </div>
+
+
+  
+
+<!-- Use any element to open the sidenav -->
+<div id="Btneventos" onclick="openNav()">
+    <img width="100px" src="<?php bloginfo('template_directory') ?>/assets/images/eventos.svg">
+</div>
+
+<main id="main">
     <header class="Header row between">
         <figure class="Header-logo">
             <?php include (TEMPLATEPATH . '/includes/logo.php'); ?>

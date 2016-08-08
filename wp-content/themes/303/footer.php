@@ -1,7 +1,7 @@
 </main>
 
 <footer class="Footer row middle">
-    <nav>
+    <div class="SocialIcons">
         <ul class="row Nav bottom">
             <li>
                 <a href=""><img width="40px" src="<?php bloginfo('template_directory') ?>/assets/images/social_facebook.svg" alt=""></a>
@@ -17,7 +17,7 @@
             </li>
 
         </ul>
-    </nav>
+    </div>
 </footer>
 
 <?php wp_footer(); ?>

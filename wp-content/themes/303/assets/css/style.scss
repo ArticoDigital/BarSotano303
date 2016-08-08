@@ -8,7 +8,7 @@ $red : #EC1C24;
 
 body {
   color: red;
-  background: peru;
+  background: tomato;
   padding: 0 1rem;
 
 }
@@ -49,25 +49,106 @@ video {
     }
   }
 }
-.Nav{
-  img{
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
-    @include transition(all .4s);
-    &:hover{
-      filter: grayscale(0);
-      -webkit-filter: grayscale(0);
-    }
-  }
-  li{
-    img {
-      height: rem(40);
-    }
-    &:nth-child(2){
-      img{
-        height: rem(35);
+.Header{
+  .Nav{
+    img{
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);
+      @include transition(all .4s);
+      &:hover{
+        filter: grayscale(0);
+        -webkit-filter: grayscale(0);
       }
     }
-
+    li{
+      margin-right: 10px;
+      img {
+        height: rem(40);
+      }
+      &:nth-child(2){
+        img{
+          height: rem(35);
+        }
+      }
+      &:nth-child(7){
+        img{
+          height: rem(50);
+        }
+      }
+    }
   }
+}
+
+.Footer{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  .Nav{
+    img{
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);
+      @include transition(all .4s);
+      &:hover{
+        filter: grayscale(0);
+        -webkit-filter: grayscale(0);
+      }
+    }
+    li{
+      margin-right: 10px;
+      img {
+        height: rem(40);
+      }
+    }
+  }
+}
+
+.sidenav {
+    height: 0; 
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    bottom: 0;
+    right: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.closebtn {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    font-size: 36px !important;
+    /*margin-left: 50px;*/
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+#Btneventos{
+  position:absolute;
+  bottom: 0px;
+  right: 0px;
 }
