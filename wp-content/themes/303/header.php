@@ -35,15 +35,15 @@
 <body <?php body_class(); ?> data-urlBody="<?php bloginfo('url') ?>">
 <video autoplay poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" loop>
     <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
-    <source src="//demosthenes.info/assets/videos/polina.webm" type="video/webm">
-    <source src="//demosthenes.info/assets/videos/polina.mp4" type="video/mp4">
+    <!--<source src="<?php bloginfo('template_url') ?>/assets/video/back.mp4" type="video/webm">-->
+    <source src="<?php bloginfo('template_url') ?>/assets/video/back.mp4" type="video/mp4">
 </video>
 
 
 <?php global $post;
 
 
-$my_query = new WP_Query('category_name=eventos&showposts=6'); ?>
+$my_query = new WP_Query('category_name=eventos&showposts=4'); ?>
     <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
@@ -53,13 +53,33 @@ $my_query = new WP_Query('category_name=eventos&showposts=6'); ?>
 
         <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
             <?php
+            
             $back = get_post_custom_values('fondo', $post->ID)[0];
             $color = get_post_custom_values('color', $post->ID)[0];
+            $attr = array();
             ?>
             <li class="cols-6 row middle end" style='background : <?php echo $back ?>'>
                 <a href=" <?php echo get_permalink($post->ID) ?>">
-                    
-                        <?php the_post_thumbnail(); ?>
+                    <div class="thumbnail">
+                        <?php 
+
+                         $meta = wp_get_attachment_metadata( get_post_thumbnail_id($post->ID ) );
+                         //print_r($meta);
+
+                            $width_i  = $meta['width'];
+                            $height_i = $meta['height'];
+                            if($width_i < $height_i)
+                            //echo $width_i."_";
+                            //echo $height_i;
+                            $attr = array(
+                                
+                                'class' => "portrait",
+                                
+                            );
+
+                        the_post_thumbnail('thumbnail',$attr); 
+                        ?>
+                        </div>
                     <?php echo '<span class="cols-6 end" style="color:  ' . $color . ' ">' . get_the_title() . '</span>' ?>
                     <!--<article>
                     <?php the_excerpt(); ?>
@@ -70,6 +90,8 @@ $my_query = new WP_Query('category_name=eventos&showposts=6'); ?>
      </ul>
      </div>
     </div>
+
+
 
 
   
