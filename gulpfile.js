@@ -22,6 +22,7 @@ gulp.task('sass', function () {
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest('./wp-content/themes/303/assets/css/'));
 });
-gulp.task('sass:watch', function () {
+gulp.task('watch', function () {
     gulp.watch('./wp-content/themes/303/assets/css/*.scss', ['sass']);
 });
+gulp.task('default', ['compile']);

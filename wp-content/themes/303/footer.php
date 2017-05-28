@@ -18,7 +18,9 @@
 
         </ul>
     </div>
+
 </footer>
+ <div class="creditsartico">Desarrollado por: <a href="http://artico.io/" target="blank">Ártico Digital</a></div>
 
 <?php wp_footer(); ?>
 </body>

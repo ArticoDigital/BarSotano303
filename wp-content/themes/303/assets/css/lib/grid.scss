@@ -54,6 +54,8 @@ $totalContainer: 100%;
   flex: 0 0 auto;
 }
 
+
+
 @for $i from 1 through $columns - 1 {
 
   .cols-#{$i} {
@@ -74,6 +76,42 @@ $totalContainer: 100%;
 
   }
 }
+
+
+@for $i from 1 through $columns{
+
+  .small-#{$i} {
+    -ms-flex-preferred-size: ($i / $columns) * 100%;
+    -webkit-flex-basis: ($i / $columns) * 100%;
+    flex-basis: ($i / $columns) * 100%;
+    max-width: ($i / $columns) * 100%;
+  }
+}
+
+@include respond-to(middle){
+  @for $i from 1 through $columns{
+    .medium-#{$i}{
+      -ms-flex-preferred-size: ($i / $columns) * 100%;
+      -webkit-flex-basis: ($i / $columns) * 100%;
+      flex-basis: ($i / $columns) * 100%;
+      max-width: ($i / $columns) * 100%;
+    }
+  }
+}
+
+@include respond-to(large){
+  @for $i from 1 through $columns{
+    .col-#{$i} {
+      -ms-flex-preferred-size: ($i / $columns) * 100%;
+      -webkit-flex-basis: ($i / $columns) * 100%;
+      flex-basis: ($i / $columns) * 100%;
+      max-width: ($i / $columns) * 100%;
+    }
+  }
+}
+
+
+
 
 @for $i from 1 through $columns - 1 {
   .offset-#{$i} {

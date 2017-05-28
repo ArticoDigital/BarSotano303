@@ -16,8 +16,8 @@
     <script type="text/javascript">
          /* Set the width of the side navigation to 250px */
         function openNav() {
-            document.getElementById("mySidenav").style.width = "280px";
-            document.getElementById("mySidenav").style.height = "80%";
+            document.getElementById("mySidenav").style.width = "300px";
+            document.getElementById("mySidenav").style.height = "70%";
         }
 
         /* Set the width of the side navigation to 0 */
@@ -25,6 +25,7 @@
             document.getElementById("mySidenav").style.width = "0";
             document.getElementById("mySidenav").style.height = "0";
         }
+        
 
     </script>
     <?php wp_head(); ?>
@@ -42,12 +43,12 @@
 <?php global $post;
 
 
-$my_query = new WP_Query('category_name=eventos&showposts=4'); ?>
+$my_query = new WP_Query('category_name=eventos&showposts=6'); ?>
     <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
 
-
+    <div id="container_nav">
     <ul class="Events row">
 
         <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
@@ -67,43 +68,44 @@ $my_query = new WP_Query('category_name=eventos&showposts=4'); ?>
             </li>
         <?php endwhile; ?>
      </ul>
+     </div>
     </div>
 
 
   
 
 <!-- Use any element to open the sidenav -->
-<div id="Btneventos" onclick="openNav()">
+<a id="Btneventos" onclick="openNav()">
     <img width="100px" src="<?php bloginfo('template_directory') ?>/assets/images/eventos.svg">
-</div>
+</a>
 
 <main id="main">
-    <header class="Header row between">
-        <figure class="Header-logo">
+    <header class="Header row between middle center">
+        <a href="/"><figure class="Header-logo">
             <?php include (TEMPLATEPATH . '/includes/logo.php'); ?>
-        </figure>
+        </figure></a>
         <nav>
             <ul class="row Nav bottom">
-                <li>
+                <li class="hidden"> 
                     <a href=""><img width="40px" src="<?php bloginfo('template_directory') ?>/assets/images/cocteles.svg" alt=""></a>
                 </li>
                 <li>
-                    <a href=""><img width="40px" src="<?php bloginfo('template_directory') ?>/assets/images/ubicacion.svg" alt=""></a>
+                    <a href="/ubicacion"><img width="40px" src="<?php bloginfo('template_directory') ?>/assets/images/ubicacion.svg" alt=""></a>
                 </li>
                 <li>
                     <a href=""><img width="40px" src="<?php bloginfo('template_directory') ?>/assets/images/galeria.svg" alt=""></a>
                 </li>
                 <li>
-                    <a href=""><img width="40px" src="<?php bloginfo('template_directory') ?>/assets/images/menu.svg" alt=""></a>
+                    <a href="/menu"><img width="40px" src="<?php bloginfo('template_directory') ?>/assets/images/menu.svg" alt=""></a>
                 </li>
-                <li>
+                <li class="hidden">
                     <a href=""><img width="50px" src="<?php bloginfo('template_directory') ?>/assets/images/blog.svg" alt=""></a>
                 </li>
-                <li>
+                <li class="hidden">
                     <a href=""><img width="60px" src="<?php bloginfo('template_directory') ?>/assets/images/promo.svg" alt=""></a>
                 </li>
                 <li>
-                    <a href=""><img width="40px" src="<?php bloginfo('template_directory') ?>/assets/images/logo_menu.svg" alt=""></a>
+                    <a href="/sobre-el-bar-303"><img width="40px" src="<?php bloginfo('template_directory') ?>/assets/images/logo_menu.svg" alt=""></a>
                 </li>
 
             </ul>
