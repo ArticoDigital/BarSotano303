@@ -8,7 +8,7 @@ $red : #EC1C24;
 
 body {
   /*color: red;
-  background: tomato;
+  background: #ec1c24;
   */
 
 }
@@ -35,8 +35,12 @@ video {
   opacity: .5;
 }
 .Header{
-  padding: rem(10);
+  padding: rem(5);
   background-color: rgba(68, 68, 68, 0.36);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
   @media (max-width: 45rem){
        padding: rem(5);
     }
@@ -204,12 +208,14 @@ video {
   background-color: rgba(255, 255, 255, 0.77);
   padding: 40px 100px;
   width: 80%;
-  margin: 5px auto 100px auto;
+  margin: 138px auto 100px auto;
   border-radius: 15px 5px;
+  
 
   @media (max-width: 45rem){
     width: 100%;
     padding: 40px 10px;
+    margin: 88px auto 100px auto;
   }
   
 }
@@ -229,7 +235,7 @@ video {
 
 h1,h2,h3,h4,h5{
   color:white;
-  background-color: tomato;
+  background-color: #ec1c24;
   padding: 0px 50px 4px 10px;
   font-weight: 300 !important;
   border-radius: 15px 5px;
@@ -301,13 +307,13 @@ h1,h2,h3,h4,h5{
   }
   .content-area{
     background-color: inherit;
-    padding: 40px 100px;
+    padding: 100px 100px;
     width: 80%;
     margin: 0px auto;
     border-radius: 0px;
     @media (max-width: 45rem){
       width: 100%;
-      padding: 0px 10px;
+      padding: 40px 10px;
       margin: 5px auto 100px auto;
     }
     .logo-ppal{
@@ -334,7 +340,7 @@ h1,h2,h3,h4,h5{
 }
 
 .lista{
-  $green: tomato;
+  $green: #ec1c24;
   /*ul{
   max-width: 300px;
     li{
@@ -350,7 +356,7 @@ h1,h2,h3,h4,h5{
       transition: all .4s ease-in-out;
       &:hover{
         font-size: 23px;
-        background-color: tomato;
+        background-color: #ec1c24;
         color: white;
         border-radius:10px;
         margin-left:10px;
@@ -427,3 +433,16 @@ h1,h2,h3,h4,h5{
 
 
 }
+
+.comidas {
+  /*background-image: url('../images/comidas-03.svg');*/
+  /*background-size: cover;*/
+  background-image: url(../images/pattern-04.svg), url(../images/comidas-05.svg), url(../images/comidas-03.svg);
+  background-position: top, bottom, center;
+  background-repeat: repeat-x, repeat-x, no-repeat;
+  padding: 90px 100px 150px 100px;
+  @media (max-width: 45rem){
+    width: 100%;
+    padding: 90px 10px;
+  }
+  }
