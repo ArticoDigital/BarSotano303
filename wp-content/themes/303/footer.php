@@ -10,7 +10,7 @@
                 <a href=""><img width="40px" src="<?php bloginfo('template_directory') ?>/assets/images/social_whatsapp.svg" alt=""></a>
             </li>
             <li>
-                <a href=""><img width="40px" src="<?php bloginfo('template_directory') ?>/assets/images/social_youtube.svg" alt=""></a>
+                <a href="https://twitter.com/BarSotano303"><img width="40px" src="<?php bloginfo('template_directory') ?>/assets/images/social_twitter.svg" alt=""></a>
             </li>
             <li>
                 <a href="https://www.instagram.com/barsotano303/"><img width="40px" src="<?php bloginfo('template_directory') ?>/assets/images/social_instagram.svg" alt=""></a>
