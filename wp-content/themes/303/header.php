@@ -125,7 +125,7 @@ $my_query = new WP_Query('category_name=eventos&showposts=4'); ?>
                     <a href="/ubicacion"><img width="40px" src="<?php bloginfo('template_directory') ?>/assets/images/ubicacion.svg" alt=""></a>
                 </li>
                 <li>
-                    <a href=""><img width="40px" src="<?php bloginfo('template_directory') ?>/assets/images/galeria.svg" alt=""></a>
+                    <a href="/galerias"><img width="40px" src="<?php bloginfo('template_directory') ?>/assets/images/galeria.svg" alt=""></a>
                 </li>
                 <li>
                     <a href="/menu"><img width="40px" src="<?php bloginfo('template_directory') ?>/assets/images/menu.svg" alt=""></a>

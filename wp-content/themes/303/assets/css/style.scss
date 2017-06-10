@@ -4,7 +4,7 @@
 @import "lib/grid";
 
 $maxWidth: 75rem;
-$red : #EC1C24;
+$red: #EC1C24;
 
 body {
   /*color: red;
@@ -12,10 +12,12 @@ body {
   */
 
 }
-main{
+
+main {
   margin: auto;
-/*  max-width: rem(1280);*/
+  /*  max-width: rem(1280);*/
 }
+
 video {
   position: fixed;
   top: 50%;
@@ -34,81 +36,85 @@ video {
 .stopfade {
   opacity: .5;
 }
-.Header{
+
+.Header {
   padding: rem(5);
   background-color: rgba(68, 68, 68, 0.36);
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1000;
-  @media (max-width: 45rem){
-       padding: rem(5);
-    }
+  z-index: 10;
+  @media (max-width: 45rem) {
+    padding: rem(5);
+  }
 }
-.Header-logo{
-  cursor:pointer;
+
+.Header-logo {
+  cursor: pointer;
   svg {
-  height: 120px;
-  margin-left: 40px;
-  @media (max-width: 45rem){
-       height:70px;
-       margin-left: 0px;
-       width: 100px;
+    height: 120px;
+    margin-left: 40px;
+    @media (max-width: 45rem) {
+      height: 70px;
+      margin-left: 0px;
+      width: 100px;
     }
   }
-  svg g{
-    fill:$red;
+  svg g {
+    fill: $red;
     @include transition(all .4s)
   }
-  &:hover{
-    svg g{
-      fill:white;
+  &:hover {
+    svg g {
+      fill: white;
     }
   }
 }
-.Header{
-  .Nav{
+
+.Header {
+  .Nav {
     margin-right: 100px;
-    @media (max-width: 45rem){
-          margin-right: 10px;
-        }
-    img{
-    
-    height: 140px;  filter: grayscale(100%);
+    @media (max-width: 45rem) {
+      margin-right: 10px;
+    }
+    img {
+
+      height: 140px;
+      filter: grayscale(100%);
       -webkit-filter: grayscale(100%);
       @include transition(all .2s);
-      &:hover{
+      &:hover {
         filter: grayscale(0);
         -webkit-filter: grayscale(0);
         transform: scale(1.2);
       }
     }
-    li{
+    li {
       margin-right: 20px;
-      @media (max-width: 45rem){
-          margin-right: 9px;
-        }
+      @media (max-width: 45rem) {
+        margin-right: 9px;
+      }
       img {
         height: rem(40);
-        @media (max-width: 45rem){
-          height:rem(30);
+        @media (max-width: 45rem) {
+          height: rem(30);
           margin-left: 0px;
         }
       }
-      &:nth-child(2){
-        img{
+      &:nth-child(2) {
+        img {
           height: rem(35);
-          @media (max-width: 45rem){
-            height:rem(25);
+          @media (max-width: 45rem) {
+            height: rem(25);
             margin-left: 0px;
           }
         }
       }
-      &:nth-child(7){
-        img{
+      &:nth-child(7) {
+        img {
           height: rem(50);
-          @media (max-width: 45rem){
-            height:rem(40);
+          @media (max-width: 45rem) {
+            height: rem(40);
             margin-left: 0px;
           }
         }
@@ -117,23 +123,23 @@ video {
   }
 }
 
-.Footer{
+.Footer {
   width: 100%;
   position: fixed;
   bottom: 0;
   left: 0;
   padding: 20px;
-  .Nav{
-    img{
+  .Nav {
+    img {
       filter: grayscale(100%);
       -webkit-filter: grayscale(100%);
       @include transition(all .2s);
-      &:hover{
+      &:hover {
         filter: grayscale(0);
         -webkit-filter: grayscale(0);
       }
     }
-    li{
+    li {
       margin-right: 20px;
       img {
         height: rem(40);
@@ -144,108 +150,110 @@ video {
 }
 
 .sidenav {
-    
-    height: 0; 
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 101; /* Stay on top */
-    bottom: 0;
-    right: 0;
-    border-radius: 15px 0px 0px 0px;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.4s; /* 0.5 second transition effect to slide in the sidenav */
-    #container_nav{
-     /* overflow-x: hidden; /* Disable horizontal scroll */
-    }
+
+  height: 0;
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 101; /* Stay on top */
+  bottom: 0;
+  right: 0;
+  border-radius: 15px 0px 0px 0px;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.4s; /* 0.5 second transition effect to slide in the sidenav */
+  #container_nav {
+    /* overflow-x: hidden; /* Disable horizontal scroll */
+  }
 }
 
 /* The navigation menu links */
 .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #818181;
-    display: block;
-    transition: 0.3s
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  transition: 0.3s
 }
 
 /* When you mouse over the navigation links, change their color */
-.sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
+.sidenav a:hover, .offcanvas a:focus {
+  color: #f1f1f1;
 }
 
 /* Position and style the close button (top right corner) */
 .closebtn {
-    position: absolute;
-    top: 0;
-    left: 5px;
-    font-size: 36px !important;
-    /*margin-left: 50px;*/
+  position: absolute;
+  top: 0;
+  left: 5px;
+  font-size: 36px !important;
+  /*margin-left: 50px;*/
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
 }
 
-#Btneventos{
-  cursor:pointer;
-  position:fixed;
+#Btneventos {
+  cursor: pointer;
+  position: fixed;
   bottom: 0px;
   right: 0px;
-  padding:5px;
+  padding: 5px;
   z-index: 100;
   width: 100px;
-  @media (max-width: 45rem){
+  @media (max-width: 45rem) {
     width: 80px;
   }
 }
 
-.content-area, .Single{
+.content-area, .Single {
   background-color: rgba(255, 255, 255, 0.77);
   padding: 40px 100px;
   width: 80%;
   margin: 138px auto 100px auto;
   border-radius: 15px 5px;
-  
 
-  @media (max-width: 45rem){
+  @media (max-width: 45rem) {
     width: 100%;
     padding: 40px 10px;
     margin: 88px auto 100px auto;
   }
-  
-}
- 
-.hidden{
-  display: none;
-} 
 
-.creditsartico{
+}
+
+.hidden {
+  display: none;
+}
+
+.creditsartico {
   position: fixed;
   bottom: 0;
   text-align: center;
   color: white;
   font-size: 12px;
   width: 100%;
-} 
+}
 
-h1,h2,h3,h4,h5{
-  color:white;
+h1, h2, h3, h4, h5 {
+  color: white;
   background-color: #ec1c24;
   padding: 0px 50px 4px 10px;
   font-weight: 300 !important;
   border-radius: 15px 5px;
 }
 
-
-.block_menu img{
-  cursor:pointer;
+.block_menu img {
+  cursor: pointer;
   transition: all .2s ease-in-out;
-  &:hover{
+  &:hover {
     transform: scale(1.1);
   }
 }
@@ -256,90 +264,93 @@ h1,h2,h3,h4,h5{
   height: 120px;
   overflow: hidden;
 }
+
 .thumbnail img {
   position: absolute;
   left: 50%;
   top: 50%;
   height: 100%;
   width: auto;
-  -webkit-transform: translate(-50%,-50%);
-      -ms-transform: translate(-50%,-50%);
-          transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
+
 .thumbnail img.portrait {
   width: 100%;
   height: auto;
 }
+
 .button_item {
-    background-color: #5a205c;
-    padding: 4px 20px;
-    margin-top: 20px;
-    font-size: 25px;
-    color: white;
-    border-radius: 10px;
+  background-color: #5a205c;
+  padding: 4px 20px;
+  margin-top: 20px;
+  font-size: 25px;
+  color: white;
+  border-radius: 10px;
 }
 
-.itemfood{
-  padding:10px 20px;
+.itemfood {
+  padding: 10px 20px;
   color: #775021;
   min-width: 292px;
   max-width: 293px;
 
   span {
-    font-weight:600;
+    font-weight: 600;
   }
 
-  img{
-    align:center;
+  img {
+    align: center;
     text-align: center;
     margin: 0 auto;
   }
-  .item_desc{
+  .item_desc {
     text-align: justify;
     font-style: oblique;
     margin-bottom: 15px;
   }
 }
 
-.home{ 
-  .Header-logo{
-    display:none;
+.home {
+  .Header-logo {
+    display: none;
   }
-  .content-area{
+  .content-area {
     background-color: inherit;
     padding: 100px 100px;
     width: 80%;
     margin: 0px auto;
     border-radius: 0px;
-    @media (max-width: 45rem){
+    @media (max-width: 45rem) {
       width: 100%;
       padding: 40px 10px;
       margin: 5px auto 100px auto;
     }
-    .logo-ppal{
-      max-width:350px;
+    .logo-ppal {
+      max-width: 350px;
     }
   }
 
-  .entrada1{
+  .entrada1 {
     font-size: 30px;
     color: white;
-    @media (max-width: 45rem){
+    @media (max-width: 45rem) {
       font-size: 22px;
     }
-    
+
   }
-  .entrada2{
+  .entrada2 {
     font-size: 17px;
     color: #e9e9e9;
-    @media (max-width: 45rem){
+    @media (max-width: 45rem) {
       font-size: 13px;
     }
-    
+
   }
 }
 
-.lista{
+.lista {
   $green: #ec1c24;
   /*ul{
   max-width: 300px;
@@ -366,71 +377,72 @@ h1,h2,h3,h4,h5{
   }*/
 
   .tab {
-      /*padding-top: 50px;
-      margin-bottom: 20px;
-      position: relative;
+    /*padding-top: 50px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    width: 70%;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    font-weight: 300;
+    color: #888;
+    -webkit-font-smoothing: antialiased;*/
+  }
+
+  .tabs {
+    display: table;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    width: 100%;
+
+    li {
+      float: left;
+      line-height: 38px;
       overflow: hidden;
-      background: #fff;
-      width: 70%;
-      margin: 0 auto;
-      font-family: 'Roboto', sans-serif;
-      line-height: 1.5;
-      font-weight: 300;
+      padding: 0;
+      position: relative;
+    }
+
+    a {
+      background-color: #eff0f2;
+      border-bottom: 1px solid #fff;
       color: #888;
-      -webkit-font-smoothing: antialiased;*/
+      font-weight: 500;
+      display: block;
+      letter-spacing: 0;
+      outline: none;
+      padding: 0 20px;
+      text-decoration: none;
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+      border-bottom: 2px solid $green;
     }
+  }
 
-    .tabs {
-      display: table;
-      position: relative;
-      overflow: hidden;
-      margin: 0;
-      width: 100%;
-      
-      li {
-        float: left;
-        line-height: 38px;
-        overflow: hidden;
-        padding: 0;
-        position: relative;
-      }
+  .tabs_item {
+    display: none;
+    padding: 30px 0;
 
-      a {
-        background-color: #eff0f2;
-        border-bottom: 1px solid #fff;
-        color: #888;
-        font-weight: 500;
-        display: block;
-        letter-spacing: 0;
-        outline: none;
-        padding: 0 20px;
-        text-decoration: none;
-        -webkit-transition: all 0.2s ease-in-out;
-        -moz-transition: all 0.2s ease-in-out;
-        transition: all 0.2s ease-in-out;
-        border-bottom: 2px solid $green;
-      }
+    h4 {
+      font-weight: bold;
+      color: $green;
+      font-size: 20px;
     }
-
-    .tabs_item {
-      display: none;
-      padding: 30px 0;
-
-      h4 {
-        font-weight: bold;
-        color: $green;
-        font-size: 20px;
-      }
-      &:first-child {display: block;}
+    &:first-child {
+      display: block;
     }
+  }
 
-    .current a {
-      color: #fff;
-      background: $green;
-      border-radius: 10px 10px 0px 10px;
-      font-size: 19px;
-    }
-
+  .current a {
+    color: #fff;
+    background: $green;
+    border-radius: 10px 10px 0px 10px;
+    font-size: 19px;
+  }
 
 }
 
@@ -441,8 +453,35 @@ h1,h2,h3,h4,h5{
   background-position: top, bottom, center;
   background-repeat: repeat-x, repeat-x, no-repeat;
   padding: 90px 100px 150px 100px;
-  @media (max-width: 45rem){
+  @media (max-width: 45rem) {
     width: 100%;
     padding: 90px 10px;
   }
+}
+.Galleries{
+  figure{
+    padding: rem(10);
   }
+  h3{
+    margin-bottom: rem(10);
+  }
+}
+.Galleries-link{
+  color: #ec1c24;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.Gallery-content{
+  max-width: rem(1000);
+  width: 100%;
+  padding: rem(160) rem(20) 0;
+  margin: auto;
+  @include respond-to(medium){
+    padding: rem(160) 0 0;
+  }
+  h3{
+    padding: rem(10) rem(20);
+    margin-bottom: rem(20);
+    text-transform: uppercase;
+  }
+}
