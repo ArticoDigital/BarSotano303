@@ -8,7 +8,7 @@
                 <h3><?php echo $cat->name ?></h3>
                 <a href="/producto/<?php echo $cat->slug ?>"><img src="<?php print_r(get_option("taxonomy_" . $cat->term_id)['imagen']); ?>" alt=""></a>
                 <p class="Recipes-chefsDescription"><?php print_r($cat->description) ?></p>
-                <a class="Galleries-link" href="/producto/<?php echo $cat->slug ?>">Ver galeria <span>→</span></a>
+                <a class="Galleries-link" href="/producto/<?php echo $cat->slug ?>">Ver productos <span>→</span></a>
             </figure> <?php endforeach ?>
 
         </div>

@@ -63,7 +63,7 @@ register_taxonomy('categoria_p', array('productos'), array(
 
 
 /* Add field image category */
-add_action( 'producto_add_form_fields', 'producto_add_new_meta_fields', 10, 2 );
+add_action( 'categoria_p_add_form_fields', 'producto_add_new_meta_fields', 10, 2 );
 function producto_add_new_meta_fields(){
     ?>
     <div>
@@ -93,7 +93,7 @@ function producto_edit_meta_fields($term){
     </tr>
     <?php
 }
-add_action( 'producto_edit_form_fields', 'producto_edit_meta_fields', 10, 2 );
+add_action( 'categoria_p_edit_form_fields', 'producto_edit_meta_fields', 10, 2 );
 /* Save edit and create chef */
 function producto_save_custom_meta( $term_id ) {
     if ( isset( $_POST['term_meta'] ) ) {
@@ -114,5 +114,5 @@ function my_product_enqueue() {
     wp_enqueue_media();
     wp_enqueue_script( 'my_custom_script', themeDirUri . '/functions/admin.js' );
 }
-add_action( 'edited_categoria', 'producto_save_custom_meta', 10, 2 );
-add_action( 'create_categoria', 'producto_save_custom_meta', 10, 2 );
+add_action( 'edited_categoria_p', 'producto_save_custom_meta', 10, 2 );
+add_action( 'create_categoria_p', 'producto_save_custom_meta', 10, 2 );
