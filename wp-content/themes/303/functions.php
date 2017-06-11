@@ -14,6 +14,7 @@ define('themeDir', get_template_directory() . '/');
 define('themeDirUri', get_template_directory_uri());
 
 require(themeDir . 'functions/gallery.php');
+require(themeDir . 'functions/products.php');
 /* Jquery + Main */
 add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
 
@@ -99,11 +100,14 @@ function override_mce_options($initArray)
 function add_query_vars($aVars)
 {
     $aVars[] = "cat_galerias"; // represents the name of the product category as shown in the URL
+    $aVars[] = "cat_producto";
+
     return $aVars;
 }
 add_filter('query_vars', 'add_query_vars');
 function add_rewrite_rules()
 {
     add_rewrite_rule('^galeria/([^/]*)/?$', 'index.php?pagename=galeria&cat_galerias=$matches[1]', 'top');
+    add_rewrite_rule('^producto/([^/]*)/?$', 'index.php?pagename=producto&cat_producto=$matches[1]', 'top');
 }
 add_action('init', 'add_rewrite_rules');
