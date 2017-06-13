@@ -116,3 +116,99 @@ function my_product_enqueue() {
 }
 add_action( 'edited_categoria_p', 'producto_save_custom_meta', 10, 2 );
 add_action( 'create_categoria_p', 'producto_save_custom_meta', 10, 2 );
+
+
+/* Add boxes recipes */
+add_action("add_meta_boxes", "value_metabox");
+function value_metabox()
+{
+    add_meta_box(
+        "p_values",
+        "Valor",
+        "box_values_print",
+        "productos",
+        "normal",
+        "high"
+    );
+    
+    add_meta_box(
+        "p_column",
+        "Columna",
+        "box_column_print",
+        "productos",
+        "normal",
+        "high"
+    );
+    add_meta_box(
+        "p_position",
+        "Posicion",
+        "box_position_print",
+        "productos",
+        "normal",
+        "high"
+    );
+    
+}
+function box_values_print()
+{
+    global $post;
+    wp_nonce_field("udp_metabox_nonce", "udp_box_nonce");
+    $meta = get_post_meta($post->ID, 'p_value', true);
+    
+    ?>
+    <p>
+        <label for="<?php echo 'p_value' ?>">Valor</label><br>
+        <?php wp_editor($meta, 'p_value') ?>
+    </p>
+
+    <?php
+}
+function box_column_print()
+{
+    global $post;
+    wp_nonce_field("udp_metabox_nonce", "udp_box_nonce");
+    $meta = get_post_meta($post->ID, 'p_column', true);
+    
+    ?>
+    <p>
+        <label for="<?php echo 'p_column' ?>">Valor</label><br>
+        <?php wp_editor($meta, 'p_column') ?>
+    </p>
+
+    <?php
+}
+function box_position_print()
+{
+    global $post;
+    wp_nonce_field("udp_metabox_nonce", "udp_box_nonce");
+    $meta = get_post_meta($post->ID, 'p_position', true);
+    
+    ?>
+    <p>
+        <label for="<?php echo 'p_position' ?>">Valor</label><br>
+        <?php wp_editor($meta, 'p_position') ?>
+    </p>
+
+    <?php
+}
+/* Save Post */
+add_action("save_post", "udp_save_metabox");
+function udp_save_metabox($post_id)
+{
+    //si no lleva la variable post meta_box_nonce o no concuerda con udp_metabox_nonce salimos
+    if (!isset($_POST["udp_box_nonce"]) || !wp_verify_nonce($_POST["udp_box_nonce"], "udp_metabox_nonce")) {
+        return;
+    }
+    //si es un autoguardado salimos
+    if (defined("DOING_AUTOSAVE") && DOING_AUTOSAVE) {
+        return;
+    }
+    //si el usuario no tiene privilegios salimos
+    if (!current_user_can("edit_post")) {
+        return;
+    }
+    update_post_meta($post_id,'p_value', $_POST['p_value'] );
+    update_post_meta($post_id,'p_column', $_POST['p_column'] );
+    update_post_meta($post_id,'p_position', $_POST['p_position'] );
+    
+}

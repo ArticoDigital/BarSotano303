@@ -111,3 +111,9 @@ function add_rewrite_rules()
     add_rewrite_rule('^producto/([^/]*)/?$', 'index.php?pagename=producto&cat_producto=$matches[1]', 'top');
 }
 add_action('init', 'add_rewrite_rules');
+
+
+function get_category_id($cat_name,$taxon){
+  $term = get_term_by('slug', $cat_name, $taxon);
+  return $term->term_id;
+}
