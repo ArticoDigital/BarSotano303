@@ -131,7 +131,6 @@ get_header();
                                 <?php endif;?>
                                 
                                 <?php if ($query3->have_posts()):?>
-                                <div>HOLA</div>
                                 <div class="col-4 small-12 medium-6 middle center itemfood">
                                     <?php
                                         while ($query3->have_posts()) : $query3->the_post(); ?>
