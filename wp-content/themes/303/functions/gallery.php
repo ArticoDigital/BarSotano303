@@ -54,6 +54,7 @@ register_taxonomy('categoria', array('galerias'), array(
     'labels' => $labels,
     'show_ui' => true,
     'query_var' => true,
+    'show_admin_column' => true,
     'rewrite' => array('slug' => 'Categoria'),
 ));
 
@@ -116,3 +117,34 @@ function my_enqueue() {
 }
 add_action( 'edited_categoria', 'categoria_save_custom_meta', 10, 2 );
 add_action( 'create_categoria', 'categoria_save_custom_meta', 10, 2 );
+
+
+add_action('restrict_manage_posts','restrict_gallery');
+function restrict_gallery() {
+    global $typenow;
+    global $wp_query;
+    if ($typenow=='galerias') {
+        $taxonomy = 'categoria';
+        $business_taxonomy = get_taxonomy($taxonomy);
+        wp_dropdown_categories(array(
+            'show_option_all' =>  __("Ver todas las categorias "),
+            'taxonomy'        =>  $taxonomy,
+            'name'            =>  'categoria',
+            'orderby'         =>  'name',
+            'selected'        =>  $wp_query->query['term'],
+            'hierarchical'    =>  true,
+            'depth'           =>  3,
+            'show_count'      =>  true, // Show # listings in parens
+            'hide_empty'      =>  true, // Don't show businesses w/o listings
+        ));
+    }
+}
+add_filter('parse_query','convert_id_to_taxonomy_term_in_query');
+function convert_id_to_taxonomy_term_in_query($query) {
+    global $pagenow;
+    $qv = &$query->query_vars;
+    if ($pagenow=='edit.php' &&  $qv['post_type'] == 'galerias' ) {
+        $term = get_term_by('id',$qv['categoria'],'categoria');
+        $qv['categoria'] = $term->slug;
+    }
+}
