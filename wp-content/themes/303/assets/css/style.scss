@@ -458,30 +458,89 @@ h1, h2, h3, h4, h5 {
     padding: 90px 10px;
   }
 }
-.Galleries{
-  figure{
+
+.Galleries {
+  figure {
     padding: rem(10);
   }
-  h3{
+  h3 {
     margin-bottom: rem(10);
   }
 }
-.Galleries-link{
+
+.Galleries-link {
   color: #ec1c24;
   font-weight: 600;
   text-transform: uppercase;
 }
-.Gallery-content{
+
+.Gallery-content {
   max-width: rem(1000);
   width: 100%;
   padding: rem(160) rem(20) 0;
   margin: auto;
-  @include respond-to(medium){
+  @include respond-to(medium) {
     padding: rem(160) 0 0;
   }
-  h3{
+  h3 {
     padding: rem(10) rem(20);
     margin-bottom: rem(20);
     text-transform: uppercase;
   }
+}
+
+.contacto {
+  max-width: 62.5rem;
+  width: 100%;
+  padding: 10rem 1.25rem 0;
+  margin: auto;
+  h3 {
+    text-align: center;
+    padding: .625rem 1.25rem;
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+  }
+  p {
+    text-align: justify;
+  }
+}
+
+.wpcf7 {
+
+  form {
+
+    label {
+      margin: auto;
+      display: block;
+      max-width: rem(500);
+      width: 100%;
+    }
+    input,textarea{
+      width: 100%;
+      height: 2.25rem;
+      padding: .125rem .25rem;
+      border: 1px solid black;
+      background: #4c4c4c;
+      color: white;
+    }
+    textarea{
+      height: rem(150);
+    }
+  }
+  input[type=submit] {
+    max-width: rem(500);
+    margin: auto;
+    display: block;
+    border-color: #ec1c24;
+    background: #ec1c24;
+    box-shadow: 0 rem(5) 0 0 #c71414;
+  }
+}
+div.wpcf7-mail-sent-ok{
+  background: #4CAF50;
+  color: white;
+}
+div.wpcf7-validation-errors{
+  background: #4CAF50;
+  color: white;
 }
