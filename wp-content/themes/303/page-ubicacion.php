@@ -23,7 +23,7 @@
 
 
     <script>// <![CDATA[
-function myMap() { var uluru = {lat: 4.602988, lng: -74.068351}; var map = new google.maps.Map(document.getElementById('googleMap'), { zoom: 20, center: uluru }); var marker = new google.maps.Marker({ position: uluru, map: map,icon: 'http://303.app/wp-content/themes/303/assets/images/logo_menu.svg'
+function myMap() { var uluru = {lat: 4.602988, lng: -74.068351}; var map = new google.maps.Map(document.getElementById('googleMap'), { zoom: 20, center: uluru }); var marker = new google.maps.Marker({ position: uluru, map: map,icon: 'http://barsotano303.com/wp-content/themes/303/assets/images/logo_menu.svg'
  }); }
 // ]]></script>
 
