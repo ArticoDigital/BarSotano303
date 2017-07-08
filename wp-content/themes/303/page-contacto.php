@@ -11,7 +11,7 @@ while (have_posts()) : the_post(); ?>
 
         <div class="contacto-form">
             <h3>Contáctenos</h3>
-            <p style="padding: 0 20px">¿Tiene algo que contarnos? aqui puedes contarnos tu experiencia, felicitarnos, proponernos y dart u punto
+            <p style="padding: 0 20px">¿Tiene algo que contarnos? aqui puedes contarnos tu experiencia, felicitarnos, proponernos y dar tu punto
                 de vista. para nosotros es muy importante saber lo que piensas.</p>
             <?php the_content() ?>
         </div>
