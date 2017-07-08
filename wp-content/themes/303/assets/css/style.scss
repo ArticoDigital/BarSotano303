@@ -552,3 +552,19 @@ div.wpcf7-validation-errors{
   top: 0;
   left: 0;
 }
+.contacto-form{
+  background-color: rgba(255,255,255,.77);
+  padding: 0 0 rem(10);
+  border-radius: rem(15) rem(5);
+  form{
+    padding: 0 rem(20);
+  }
+}
+
+@media (max-height: 800px) {
+  #contacto .creditsartico{
+    position: static;
+    margin-top: rem(40);
+  }
+
+}

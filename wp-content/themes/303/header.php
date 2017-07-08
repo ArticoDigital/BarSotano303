@@ -38,7 +38,7 @@
             $fondopage = get_post_custom_values($key = 'fondo')[0];
 
             ?>
-<body <?php body_class(); ?> data-urlBody="<?php bloginfo('url') ?>">
+<body <?php body_class(); ?> data-urlBody="<?php bloginfo('url') ?> " id="<?php echo get_query_var('pagename') ?>">
     <video autoplay poster="<?php bloginfo('template_url') ?>/assets/images/back.jpg" id="bgvid" loop>
     <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
     <!--<source src="<?php bloginfo('template_url') ?>/assets/video/back.mp4" type="video/webm">-->
