@@ -561,10 +561,10 @@ div.wpcf7-validation-errors{
   }
 }
 
-@media (max-height: 800px) {
-  #contacto .creditsartico{
+@media (max-height: 850px) {
+  #contacto footer,  #contacto .creditsartico{
     position: static;
-    margin-top: rem(40);
+
   }
 
 }
