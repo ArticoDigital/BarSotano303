@@ -142,6 +142,9 @@ $my_query = new WP_Query('category_name=eventos&showposts=4'); ?>
                 <li>
                     <a href="/sobre-el-bar-303"><img width="40px" src="<?php bloginfo('template_directory') ?>/assets/images/logo_menu.svg" alt=""></a>
                 </li>
+                <li>
+                    <a href="/contacto"><img width="40px" src="<?php bloginfo('template_directory') ?>/assets/images/contacto.svg" alt=""></a>
+                </li>
 
             </ul>
         </nav>
