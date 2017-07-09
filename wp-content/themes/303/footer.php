@@ -7,7 +7,7 @@
                 <a href="https://www.facebook.com/BarSotano303/?ref=br_rs"><img width="40px" src="<?php bloginfo('template_directory') ?>/assets/images/social_facebook.svg" alt=""></a>
             </li>
             <li>
-                <a href=""><img width="40px" src="<?php bloginfo('template_directory') ?>/assets/images/social_whatsapp.svg" alt=""></a>
+                <a target="_blank" href="https://api.whatsapp.com/send?phone=+573142777777&text=Hola%20Migue"><img width="40px" src="<?php bloginfo('template_directory') ?>/assets/images/social_whatsapp.svg" alt=""></a>
             </li>
             <li>
                 <a href="https://twitter.com/BarSotano303"><img width="40px" src="<?php bloginfo('template_directory') ?>/assets/images/social_twitter.svg" alt=""></a>
