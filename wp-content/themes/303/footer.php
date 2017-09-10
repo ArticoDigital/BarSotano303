@@ -20,7 +20,9 @@
     </div>
 
 </footer>
- <div class="creditsartico">Desarrollado por: <a href="http://artico.io/" target="blank">Ártico Digital</a></div>
+ <div class="creditsartico">Prohíbase el expendio de
+bebidas embriagantes a menores de edad. Ley 124 de 1994. El exceso de alcohol es perjudicial
+para la salud. Ley 30 de 1986.<br>Desarrollado por: <a href="http://artico.io/" target="blank">Ártico Digital</a></div>
 
 <?php wp_footer(); ?>
 </body>

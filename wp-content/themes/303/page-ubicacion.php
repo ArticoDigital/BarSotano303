@@ -8,11 +8,15 @@
 				<div id="googleMap" style="width: 100%; height: 400px;">_</div>
 				</div>
 				<div class="col-4 small-12" style="padding: 20px;">
-				<h1>Ubicación</h1>
-				Calle 19 No 3-03, Centro de Bogotá
-				<h2>¿Cómo llegar?</h2>
-				<strong>Transmilenio:</strong> Llegar a la Estación de Las Aguas o Universidades.
-				<strong> Bus:</strong> Cualquiera que diga Germania o Luis A. Arango
+				<h1 class="text_centered">Ubicación</h1>
+				<p>Calle 19 No 3-03, Centro de Bogotá</p>
+				<h2 class="text_centered">¿COMO LLEGAR?</h2>
+				<p>Estamos Ubicados En La Esquina De La Calle 19 Con Carrera 3ra
+				<strong>TRANSMILENIO:</strong> Pasos Abajo de la Salida Norte Estación las Aguas.
+				</p>
+				<h2 class="text_centered">HORARIOS</h2><p>Lunes a Sábado de 10 am a 3 am y Domingos de 12m a 12am</p>
+				<h2 class="text_centered">FORMAS DE PAGO</h2><p>Efectivo y Tarjetas Débito  O Crédito. </p>
+				 <h2 class="text_centered">ZONA WIFI</h2>
 
 				</div>
 				</div>
@@ -20,11 +24,15 @@
 
         </div>
     </section>
-
-
+<style type="text/css">
+	.text_centered{
+		text-align: center;
+		padding: 5px 10px;
+	}
+</style>
     <script>// <![CDATA[
 function myMap() { 
-	var uluru = {lat: 4.602988, lng: -74.068351}; 
+	var uluru = {lat: 4.6029334, lng: -74.0683986}; 
 	var map = new google.maps.Map(document.getElementById('googleMap'), { 
 		zoom: 18, 
 		center: uluru,

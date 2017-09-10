@@ -39,7 +39,7 @@ video {
 
 .Header {
   padding: rem(5);
-  background-color: rgba(68, 68, 68, 0.36);
+  background-color: rgba(230, 22, 22, 0.82);
   position: fixed;
   width: 100%;
   top: 0;
@@ -61,7 +61,7 @@ video {
     }
   }
   svg g {
-    fill: $red;
+    /*fill: $red;*/
     @include transition(all .4s)
   }
   &:hover {
@@ -101,36 +101,19 @@ video {
           margin-left: 0px;
         }
       }
-      &:nth-child(2) {
-        img {
-          height: rem(35);
-          @media (max-width: 45rem) {
-            height: rem(25);
-            margin-left: 0px;
-          }
-        }
-      }
-      &:nth-child(7) {
-        img {
-          height: rem(50);
-          @media (max-width: 45rem) {
-            height: rem(40);
-            margin-left: 0px;
-          }
-        }
-      }
     }
   }
 }
 
 .Footer {
-  width: 100%;
   position: fixed;
   bottom: 0;
   left: 0;
   padding: 20px;
+  z-index: 10;
   .Nav {
-    img {
+    /*img {
+      
       filter: grayscale(100%);
       -webkit-filter: grayscale(100%);
       @include transition(all .2s);
@@ -138,7 +121,8 @@ video {
         filter: grayscale(0);
         -webkit-filter: grayscale(0);
       }
-    }
+      
+    }*/
     li {
       margin-right: 20px;
       img {
@@ -240,6 +224,13 @@ video {
   color: white;
   font-size: 12px;
   width: 100%;
+  padding: 0 100px 0 220px;
+  z-index: 5;
+  @media (max-width: 45rem) {
+      position: inherit;
+      padding: 0 5px 0 5px;
+      margin-bottom: 80px;
+    }
 }
 
 h1, h2, h3, h4, h5 {
