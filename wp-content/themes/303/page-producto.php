@@ -18,6 +18,7 @@ get_header();
         <div id="primary" class="content-area ">
             <div class="lista">
                 <div class="tab">
+                    <a href="/productos">Volver</a>
                     <ul class="tabs">
                         <?php
                         /*echo "<pre>";
