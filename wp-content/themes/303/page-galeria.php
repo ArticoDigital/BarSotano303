@@ -1,41 +1,37 @@
-<?php
-$category = get_query_var('cat_galerias');
-get_header(); ?>
-    <section class="Gallery">
-        <div id="primary" class="Gallery-content">
-            <h3><?php  echo str_replace("-", " ", $category) ?></h3>
-            <?php
-            $args = [
-                'post_type' => 'galerias',
-                'tax_query' => [
-                    [
-                        'taxonomy' => 'categoria',
-                        'field' => 'slug',
-                        'terms' => $category,
-                    ]
-                ]
-                , 'order' => 'DESC',];
-            $query = new WP_Query($args);
-            ?>
-            <div class="m-p-g">
-                <div class="m-p-g__thumbs" data-google-image-layout data-max-height="350">
-                    <?php
-                    while ($query->have_posts()) : $query->the_post(); ?>
-                        <img src="<?php the_post_thumbnail_url(); ?>" data-full="<?php the_post_thumbnail_url(); ?>"
-                             class="m-p-g__thumbs-img"/>
-                    <?php endwhile; ?>
-                </div>
-                <div class="m-p-g__fullscreen"></div>
+<?php get_header(); ?>
+    <section class="Galleries">
+        <div id="primary" class="content-area   row ">
+
+
+            <div class="owl-carousel owl-theme">
+                <?php
+                $terms = get_terms("categoria", array("hide_empty" => false));
+                foreach ($terms as $cat) : $nameChef = explode(" ", $cat->name) ?>
+                    <figure class="col-12 small-12" data-filter=".<?php echo $cat->slug ?>">
+                        <h3><?php echo $cat->name ?></h3>
+                        <a href="/galeria/<?php echo $cat->slug ?>"><img src="<?php print_r(get_option("taxonomy_" . $cat->term_id)['imagen']); ?>" alt=""></a>
+                        <p class="Recipes-chefsDescription"><?php print_r($cat->description) ?></p>
+                        <a class="Galleries-link" href="/galeria/<?php echo $cat->slug ?>">Ver galeria <span>→</span></a>
+                    </figure> <?php endforeach ?>
             </div>
+
         </div>
     </section>
+
+
+
 <?php
-wp_enqueue_script('script', get_template_directory_uri() . '/assets/js/material-photo-gallery.min.js');
-wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/material-photo-gallery.css'); ?>
-    <script>
-        var elem = document.querySelector('.m-p-g');
-        document.addEventListener('DOMContentLoaded', function () {
-            var gallery = new MaterialPhotoGallery(elem);
-        });
-    </script>
+wp_enqueue_script( 'owl',  'https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js', array('jquery'), '1.0.0', true );
+wp_enqueue_style( 'slider1', 'https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css',false,'1.1','all');
+?>
+
 <?php get_footer(); ?>
+<script>
+    $(document).ready(function(){
+        $('.owl-carousel').owlCarousel({
+            autoplay: true,
+            items: 1,
+            loop: true
+        });
+    });
+</script>
