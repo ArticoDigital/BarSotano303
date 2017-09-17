@@ -10,9 +10,8 @@ while (have_posts()) : the_post(); ?>
     <section class="contacto">
 
         <div class="contacto-form">
-            <h3>Contáctenos</h3>
-            <p style="padding: 0 20px">¿Tiene algo que contarnos? aqui puedes contarnos tu experiencia, felicitarnos, proponernos y dar tu punto
-                de vista. para nosotros es muy importante saber lo que piensas.</p>
+            <h3>CONTACTO Y RESERVAS</h3>
+            <p style="padding: 0 20px">En este espacio puedes hacer tu reserva, compartir tu experiencia o dejarnos tus quejas y reclamos o piropos y sonrisas. Para nosotros es muy importante saber lo que piensas</p>
             <?php the_content() ?>
         </div>
     </section>
