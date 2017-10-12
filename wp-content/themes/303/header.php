@@ -32,22 +32,19 @@
 
 </head>
 <?php
-   
-            
-          
-            $videomp4 = get_post_custom_values($key = 'video_mp4')[0];
-            $videowebm = get_post_custom_values($key = 'video_webm')[0];
-            $imagePage = get_the_post_thumbnail_url();
+            $videomp4 = (get_post_custom_values($key = 'video_mp4')[0])?get_post_custom_values($key = 'video_mp4')[0]:bloginfo('template_url') . "/assets/video/back.mp4";
+            $videowebm = (get_post_custom_values($key = 'video_webm')[0])?get_post_custom_values($key = 'video_webm')[0]:bloginfo('template_url') . "/assets/video/back.webm";
+            $imagePage = (get_the_post_thumbnail_url())?get_the_post_thumbnail_url():bloginfo('template_url') . "/assets/images/back.jpg";
             ?>
 <body <?php echo $imagePage ?> <?php body_class(); ?> data-urlBody="<?php bloginfo('url') ?> " id="<?php echo get_query_var('pagename') ?>">
-    <video autoplay muted poster="<?php bloginfo('template_url') ?>/assets/images/back.jpg" id="bgvid" loop>
+    <video autoplay muted poster="<?php echo $imagePage?>" id="bgvid" loop>
     <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
     <!--<source src="<?php bloginfo('template_url') ?>/assets/video/back.mp4" type="video/webm">-->
     <?php if(is_home() || is_front_page()):?>
 
-    <source src="<?php bloginfo('template_url') ?>/assets/video/back.mp4" type="video/mp4">
+    <source src="<?php echo $videomp4 ?>" type="video/mp4">
     <!--<source src="<?php bloginfo('template_url') ?>/assets/video/BarSotano303.webm" type="video/webm">-->
-    <source src="<?php bloginfo('template_url') ?>/assets/video/back.webm" type="video/webm">
+    <source src="<?php echo $imagePage ?>" type="video/webm">
     <?php endif; ?>
 </video>
     <?php if(is_home() || is_front_page()):?>
