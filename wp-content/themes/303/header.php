@@ -35,7 +35,7 @@
    
             
             global $fondopage; 
-            $fondopage = get_post_custom_values($key = 'fondo')[0];
+            $fondopage = get_post_custom_values($key = 'video_mp4')[0];
 
             ?>
 <body <?php echo $fondopage ?> <?php body_class(); ?> data-urlBody="<?php bloginfo('url') ?> " id="<?php echo get_query_var('pagename') ?>">
