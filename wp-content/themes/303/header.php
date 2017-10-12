@@ -32,9 +32,9 @@
 
 </head>
 <?php
-            $videomp4 = (get_post_custom_values($key = 'video_mp4')[0])?get_post_custom_values($key = 'video_mp4')[0]:bloginfo('template_url') . "/assets/video/back.mp4";
-            $videowebm = (get_post_custom_values($key = 'video_webm')[0])?get_post_custom_values($key = 'video_webm')[0]:bloginfo('template_url') . "/assets/video/back.webm";
-            $imagePage = (get_the_post_thumbnail_url())?get_the_post_thumbnail_url():bloginfo('template_url') . "/assets/images/back.jpg";
+            $videomp4 = (get_post_custom_values($key = 'video_mp4')[0])?get_post_custom_values($key = 'video_mp4')[0]:get_template_directory_uri('template_url') . "/assets/video/back.mp4";
+            $videowebm = (get_post_custom_values($key = 'video_webm')[0])?get_post_custom_values($key = 'video_webm')[0]:get_template_directory_uri('template_url') . "/assets/video/back.webm";
+            $imagePage = (get_the_post_thumbnail_url())?get_the_post_thumbnail_url():get_template_directory_uri('template_url') . "/assets/images/back.jpg";
             ?>
 <body <?php echo $imagePage ?> <?php body_class(); ?> data-urlBody="<?php bloginfo('url') ?> " id="<?php echo get_query_var('pagename') ?>">
     <video autoplay muted poster="<?php echo $imagePage?>" id="bgvid" loop>
