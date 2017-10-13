@@ -320,6 +320,9 @@ h1, h2, h3, h4, h5 {
     }
     .logo-ppal {
       max-width: 350px;
+      @include respond-to(small) {
+        display: none;
+      }
     }
   }
 
