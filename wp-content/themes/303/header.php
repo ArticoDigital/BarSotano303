@@ -39,7 +39,7 @@
             $imagePage = (get_the_post_thumbnail_url())?get_the_post_thumbnail_url():get_template_directory_uri('template_url') . "/assets/images/back.jpg";
             ?>
 <body $fondopage <?php echo $imagePage ?> <?php body_class(); ?> data-urlBody="<?php bloginfo('url') ?> " id="<?php echo get_query_var('pagename') ?>">
-    <video autoplay muted poster="<?php echo $imagePage?>" id="bgvid" loop>
+    <video id="videobackground" autoplay muted poster="<?php echo $imagePage?>" id="bgvid" loop>
     <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
     <!--<source src="<?php bloginfo('template_url') ?>/assets/video/back.mp4" type="video/webm">-->
     <?php if(is_home() || is_front_page()):?>
